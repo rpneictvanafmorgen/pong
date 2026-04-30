@@ -107,12 +107,9 @@ If you are using a single-config generator such as Ninja or Makefiles, the execu
 
 ### Building On Linux
 
-To create a Linux executable, build the project on Linux. On Arch Linux:
+To create a Linux executable, build the project on Linux:
 
 ```bash
-sudo pacman -Syu base-devel cmake git
-git clone https://github.com/rpneictvanafmorgen/pong.git
-cd pong
 cmake -S . -B build
 cmake --build build
 ./build/pong
