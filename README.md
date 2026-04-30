@@ -105,6 +105,21 @@ If you are using a single-config generator such as Ninja or Makefiles, the execu
 .\build\pong.exe
 ```
 
+### Building On Linux
+
+To create a Linux executable, build the project on Linux. On Arch Linux:
+
+```bash
+sudo pacman -Syu base-devel cmake git
+git clone https://github.com/rpneictvanafmorgen/pong.git
+cd pong
+cmake -S . -B build
+cmake --build build
+./build/pong
+```
+
+Windows builds usually create `pong.exe`. Linux builds usually create a native executable named `pong`.
+
 ## Suggested Exercises
 
 Good beginner changes to try:
