@@ -19,15 +19,63 @@ The goal of this project is to show the basic pieces of a simple game:
 
 ## Requirements
 
-Install these first:
+You need two tools before you can build the project:
 
-- CMake 3.20 or newer
-- A C++ compiler
-  - Windows: Visual Studio 2022 with "Desktop development with C++"
-  - macOS: Xcode command line tools
-  - Linux: GCC or Clang
+- **CMake 3.20 or newer**: generates the build files for your computer.
+- **A C++ compiler**: turns the source code into an executable program.
 
 raylib is downloaded automatically by CMake the first time you configure the project.
+
+### Windows
+
+Install CMake from PowerShell:
+
+```powershell
+winget install Kitware.CMake
+```
+
+Install a C++ compiler:
+
+1. Download and install [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/).
+2. In the installer, select **Desktop development with C++**.
+3. Finish the install, then restart PowerShell so it can find the new tools.
+
+To check your setup:
+
+```powershell
+cmake --version
+```
+
+If `cmake` is still not recognized, restart your terminal or your computer.
+
+### macOS
+
+Install the Xcode command line tools:
+
+```bash
+xcode-select --install
+```
+
+Install CMake with Homebrew:
+
+```bash
+brew install cmake
+```
+
+### Linux
+
+On Ubuntu or Debian:
+
+```bash
+sudo apt update
+sudo apt install build-essential cmake
+```
+
+On Fedora:
+
+```bash
+sudo dnf install gcc-c++ cmake
+```
 
 ## Build And Run
 
@@ -50,16 +98,6 @@ If you are using a single-config generator such as Ninja or Makefiles, the execu
 ```powershell
 .\build\pong.exe
 ```
-
-## Windows Setup Notes
-
-If `cmake` is not recognized in PowerShell, install it:
-
-```powershell
-winget install Kitware.CMake
-```
-
-If you do not have a C++ compiler yet, install Visual Studio 2022 and select the workload named **Desktop development with C++**.
 
 ## Suggested Exercises
 
