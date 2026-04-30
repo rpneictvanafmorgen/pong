@@ -77,6 +77,12 @@ On Fedora:
 sudo dnf install gcc-c++ cmake
 ```
 
+On Arch Linux:
+
+```bash
+sudo pacman -Syu base-devel cmake
+```
+
 ## Build And Run
 
 From this folder:
